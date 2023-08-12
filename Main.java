@@ -7,7 +7,7 @@ public class Main{
     root.left = new Node(30);
     root.right = new Node(60);
     root.left.left = new Node(10);
-    root.left.right = new Node(55);
+    root.right.left = new Node(55);
     
     Node skewedRoot = BST.convertToSkewedTree(root);
 
