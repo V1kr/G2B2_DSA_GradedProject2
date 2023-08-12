@@ -33,6 +33,9 @@ public class SkyscraperConstruction {
 
     Stack<Integer> floorsToAssemble = new Stack<>();
 
+    System.out.println("The order of construction is as follows:");
+    System.out.println();
+
     for(int i = 0;i<n;i++) {
       System.out.println("Day: " + (i+1));
       int floor = floorSizes.poll();
