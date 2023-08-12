@@ -32,16 +32,13 @@ public class SkyscraperConstruction {
     }
 
     Stack<Integer> floorsToAssemble = new Stack<>();
-
-    System.out.println("The order of construction is as follows:");
-    System.out.println();
-
+    System.out.println("The order of construction is as follows\n");
     for(int i = 0;i<n;i++) {
       System.out.println("Day: " + (i+1));
       int floor = floorSizes.poll();
       floorsToAssemble.push(floor);
       if(isLargestAvailable(floorSizes, floor)) {
-        while(!floorsToAssemble.isEmpty()) {
+        while(!floorsToAssemble.isEmpty() && isLargestAvailable(floorSizes, floorsToAssemble.peek())) {
           System.out.print(floorsToAssemble.pop() + " ");
         }
       }
